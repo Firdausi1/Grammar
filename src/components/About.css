@@ -1,0 +1,37 @@
+.about{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.about span{
+    color: #0702fc;
+}
+
+.about__text{
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    color: #105A31;
+}
+
+.about__paragraph{
+    width: 70%;
+    margin: 40px auto;
+    color: #8D07AE;
+    padding-bottom: 10px;
+    font-weight: 300;
+    line-height: 25px;
+    letter-spacing: .5px;
+}
+
+@media screen and (max-width: 768px){
+    .about__text{
+        margin-top: 1px;
+    }
+}
+
+@media screen and (max-width: 425px){
+    .about{
+        display: none;
+    }
+}

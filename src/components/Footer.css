@@ -1,0 +1,34 @@
+.footer {
+	background-color: #105a31;
+	text-align: center;
+	color: #fafaf6;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.footer p {
+	font-size: 13px;
+}
+
+.footer ul {
+	list-style-type: none;
+	display: flex;
+	width: 10%;
+	justify-content: space-around;
+	margin: 0 auto;
+	margin-bottom: 10px;
+}
+
+.footer img {
+	width: 50%;
+}
+
+.footer__copy {
+	margin-bottom: 10px;
+}
+
+@media screen and (max-width: 425px){
+    .footer{
+        display: none;
+    }
+}
