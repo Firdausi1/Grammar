@@ -13,7 +13,7 @@ const Body = () => {
                 <button className="body__btn3 btn">Grammar Quizzes</button>
             </div>
             <div className="body__container2">
-                <img src="../../Layer 2img2.svg" alt="body image"/>
+                <img src="../../Layer 2img2.svg" alt="body"/>
             </div>
             </div>
         </div>

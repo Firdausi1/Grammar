@@ -3,7 +3,6 @@ import { Link, NavLink } from "react-router-dom";
 import "./Nav.css";
 import MenuIcon from "@material-ui/icons/Menu";
 import CloseIcon from "@material-ui/icons/Close";
-import Footer from "./Footer";
 
 const Nav = () => {
 	const [clicked, setClicked] = useState(false);
@@ -57,7 +56,6 @@ const Nav = () => {
 					<button>Contact Us</button>
 				</li>
 			</ul>
-			{clicked ? <Footer className="nav__footer" /> : ""}
 		</nav>
 	);
 };

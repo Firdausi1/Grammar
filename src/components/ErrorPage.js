@@ -6,7 +6,7 @@ const ErrorPage = () => {
         <div className="error">
             <div className="error__body">
 				<div className="error__img">
-					<img src="../../Layer 2404.svg" alt="Error image" />
+					<img src="../../Layer 2404.svg" alt="Error" />
 				</div>
 				<div className="error__text">
 					<h2><span>404</span></h2>
