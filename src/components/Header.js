@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "./Header.css";
 import Mistake from "./Mistake";
-import useClippy from "use-clippy";
+import CheckIcon from '@material-ui/icons/Check';
+import ErrorOutlineIcon from '@material-ui/icons/ErrorOutline';
 
 const Header = () => {
 	const [text, setText] = useState("");
 	const [errors, setErrors] = useState([]);
-	const [clipboard, setClipboard] = useClippy();
 
 	const grammar = (e) => {
 		setText(e.target.value);
@@ -82,7 +82,8 @@ const Header = () => {
 						))}
 					</div>
 					<textarea onChange={grammar} value={text}></textarea>
-					<button className="btn__submit">Submit</button>
+					{errors.length === 0 ? <div className="error-container noError"><CheckIcon className="icon"/><p>You're good to go. </p></div>:<div className="error-container error-message"><ErrorOutlineIcon className="icon"/><p>Oops there seems to be some errors. </p></div>}
+					<button className="btn__submit" onSubmit={checker}>Submit</button>
 				</div>
 			</div>
 		</div>

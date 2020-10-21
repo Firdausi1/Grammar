@@ -1,6 +1,6 @@
 .mistake__container{
     position: absolute;
-    height: 80px;
+    height: 100px;
     text-align: center;
     transform: translate(50%, 50%);
     width: 40%;
@@ -10,7 +10,7 @@
     padding: 15px;
     color:  #8D07AE ;
     font-size: 12px;
-    margin: 0 auto;
+    justify-content: center;
     border-bottom: none;
 }
 

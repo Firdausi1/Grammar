@@ -66,6 +66,7 @@
     border-bottom: 1px solid #8D07AE;
     width: 35%;
     margin: 40px auto;
+    cursor: pointer;
 }
 
 .mistake{
@@ -82,6 +83,23 @@ textarea{
     padding: 30px;
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+.error-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    font-weight: 600;
+}
+
+.noError{
+    color: #105a31;
+}
+
+.error-message{
+    color: #C75300;
 }
 
 .btn__submit{
@@ -150,5 +168,14 @@ textarea{
 .btn__submit{
     display: block;
     margin-left: 25%;
+}
+.error-container{
+    width: 100%;
+}
+.error-container p{
+    margin-left: 0;
+}
+.icon{
+    margin-left: 20px;
 }
 }
