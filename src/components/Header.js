@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "./Header.css";
 import Mistake from "./Mistake";
+import useClippy from "use-clippy";
+
 const Header = () => {
 	const [text, setText] = useState("");
 	const [errors, setErrors] = useState([]);
+	const [clipboard, setClipboard] = useClippy();
 
 	const grammar = (e) => {
 		setText(e.target.value);
@@ -25,6 +28,17 @@ const Header = () => {
 		});
 		console.log(check);
 		setErrors(check.matches);
+	};
+
+	const handlePaste = () => {
+		navigator.clipboard
+			.readText()
+			.then((text) => {
+				setText(text);
+			})
+			.catch((err) => {
+				console.log("Something went wrong", err);
+			});
 	};
 
 	useEffect(() => {
@@ -50,7 +64,7 @@ const Header = () => {
 				<div className="header__bodySide">
 					<button>Upload File</button>
 					<h3>OR</h3>
-					<p>Paste Plain Test below</p>
+					<a className="header__link" onClick={handlePaste}>Paste Plain Test below</a>
 					<div className="mistake">
 						{errors.map((error, index) => (
 							<Mistake
@@ -67,7 +81,7 @@ const Header = () => {
 							/>
 						))}
 					</div>
-								<textarea onChange={grammar} onK value={text}></textarea>
+					<textarea onChange={grammar} value={text}></textarea>
 					<button className="btn__submit">Submit</button>
 				</div>
 			</div>
