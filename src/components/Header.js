@@ -1,18 +1,15 @@
 import React, { useEffect, useState } from "react";
 import "./Header.css";
-import Mistake from './Mistake';
+import Mistake from "./Mistake";
 const Header = () => {
 	const [text, setText] = useState("");
 	const [errors, setErrors] = useState([]);
-	const [errorMessage, setErrorMessage] = useState([])
-	
 
 	const grammar = (e) => {
 		setText(e.target.value);
 	};
 
 	const checker = async () => {
-		
 		const LanguageToolApi = require("language-grammar-api");
 
 		const options = {
@@ -27,11 +24,9 @@ const Header = () => {
 			language: "en-US", // required (you can use .languages call to get language)
 		});
 		console.log(check);
-		setErrorMessage(check.matches);
 		setErrors(check.matches);
-
 	};
-			
+
 	useEffect(() => {
 		checker();
 	}, [text]);
@@ -56,20 +51,23 @@ const Header = () => {
 					<button>Upload File</button>
 					<h3>OR</h3>
 					<p>Paste Plain Test below</p>
-					<div>
-					{errorMessage.map((error, index) => (
-						<Mistake message={error.message} key={index}/>
-					))}
+					<div className="mistake">
+						{errors.map((error, index) => (
+							<Mistake
+								className="header__mistake"
+								mistake={error.context.text.substr(
+									error.context.offset,
+									error.context.length
+								)}
+								message={error.message}
+								key={index}
+								replace={error.replacements}
+								text={text}
+								setText={setText}
+							/>
+						))}
 					</div>
-					<div>
-					{errors.map((error, index) => (
-						<Mistake mistake={error.mistake} key={index}/>
-					))}
-					</div>
-					<textarea onChange={grammar}>
-					
-					</textarea>
-					
+								<textarea onChange={grammar} onK value={text}></textarea>
 					<button className="btn__submit">Submit</button>
 				</div>
 			</div>

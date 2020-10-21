@@ -1,0 +1,27 @@
+.mistake__container{
+    position: absolute;
+    height: 80px;
+    text-align: center;
+    transform: translate(50%, 50%);
+    width: 40%;
+    box-shadow: 0px 5px 10px 0px #E5E5E5;
+    background-color: white;
+    border-radius: 25px;
+    padding: 15px;
+    color:  #8D07AE ;
+    font-size: 12px;
+    margin: 0 auto;
+    border-bottom: none;
+}
+
+.mistake__container span{
+    color: #398259;
+    font-weight: 400;
+}
+
+select{
+    border: 1px solid #0702fc;
+    color: #0702FC;
+    border-radius: 2px;
+    outline: none;
+}

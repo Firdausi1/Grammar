@@ -1,11 +1,35 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
+import "./Mistake.css";
 
-const Mistake = ({message}) => {
-    return (
-        <div>
-            {message}
-        </div>
-    )
-}
+const Mistake = ({ message, mistake, replace, index, text, setText }) => {
+	const [change, setChange] = useState("");
 
-export default Mistake
+	const handleReplace = (e) => {
+		setChange(e.target.value);
+		console.log(change);
+	};
+
+	const replacetext = () => {
+		text = text.replace(mistake, change);
+		console.log(text);
+		setText(text);
+	};
+
+	useEffect(() => {
+        if(change){
+		replacetext();}
+	}, [change]);
+	return (
+		<div className="mistake__container">
+			{message} <span> "{mistake}" </span> Replace with{" "}
+			<select onChange={handleReplace}>
+				<option>select</option>
+				{replace.map((item) => (
+					<option key={index}>{item.value}</option>
+				))}
+			</select>
+		</div>
+	);
+};
+
+export default Mistake;

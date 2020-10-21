@@ -67,6 +67,10 @@
     margin: 40px auto;
 }
 
+.mistake{
+    position: relative;
+}
+
 textarea{
     width: 80%;
     height: 350px;
@@ -75,6 +79,8 @@ textarea{
     overflow-y: scroll;
     outline: none;
     padding: 30px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .btn__submit{
