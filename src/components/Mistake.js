@@ -6,12 +6,10 @@ const Mistake = ({ message, mistake, replace, index, text, setText }) => {
 
 	const handleReplace = (e) => {
 		setChange(e.target.value);
-		console.log(change);
 	};
 
 	const replacetext = () => {
 		text = text.replace(mistake, change);
-		console.log(text);
 		setText(text);
 	};
 

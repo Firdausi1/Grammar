@@ -20,13 +20,11 @@ const Nav = () => {
 				{clicked ? <CloseIcon /> : <MenuIcon />}
 			</div>
 			<ul className={clicked ? "nav__list mobile" : "nav__list"} onClick={handleClick}>
-				{clicked ? (
-					<li>
+				
+					<li className="nav__menu">
 						<span>MENU</span>
 					</li>
-				) : (
-					""
-				)}
+				
 				<li>
 					<NavLink to="/" exact activeClassName="active">
 						Grammar <br /> check

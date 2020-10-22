@@ -32,6 +32,10 @@
     color: #8D07AE;
 }
 
+.nav__menu{
+    display: none;
+}
+
 .nav button{
     background-color: #0702FC;
     border: none;
@@ -88,6 +92,9 @@
         color: #105A31;
     }
     .nav__footer{
+        display: block;
+    }
+    .nav__menu{
         display: block;
     }
 }
