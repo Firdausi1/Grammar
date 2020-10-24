@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./Header.css";
 import Mistake from "./Mistake";
-import CheckIcon from '@material-ui/icons/Check';
-import ErrorOutlineIcon from '@material-ui/icons/ErrorOutline';
+import CheckIcon from "@material-ui/icons/Check";
+import ErrorOutlineIcon from "@material-ui/icons/ErrorOutline";
 
 const Header = () => {
 	const [text, setText] = useState("");
@@ -62,9 +62,11 @@ const Header = () => {
 					<img src="grammar/../Layer 2img1.png" alt="header" />
 				</div>
 				<div className="header__bodySide">
-					<button>Upload File</button>
+					<button className="btn-primary">Upload File</button>
 					<h3>OR</h3>
-					<a className="header__link" onClick={handlePaste}>Paste Plain Test below</a>
+					<a className="header__link" onClick={handlePaste}>
+						Paste Plain Test below
+					</a>
 					<div className="mistake">
 						{errors.map((error, index) => (
 							<Mistake
@@ -82,8 +84,20 @@ const Header = () => {
 						))}
 					</div>
 					<textarea onChange={grammar} value={text}></textarea>
-					{errors.length === 0 ? <div className="error-container noError"><CheckIcon className="icon"/><p>You're good to go. </p></div>:<div className="error-container error-message"><ErrorOutlineIcon className="icon"/><p>Oops there seems to be some errors. </p></div>}
-					<button className="btn__submit" onSubmit={checker}>Submit</button>
+					{errors.length === 0 ? (
+						<div className="error-container noError">
+							<CheckIcon className="icon" />
+							<p>You're good to go. </p>
+						</div>
+					) : (
+						<div className="error-container error-message">
+							<ErrorOutlineIcon className="icon" />
+							<p>Oops there seems to be some errors. </p>
+						</div>
+					)}
+					<button className="btn__submit btn-primary" onSubmit={checker}>
+						Submit
+					</button>
 				</div>
 			</div>
 		</div>

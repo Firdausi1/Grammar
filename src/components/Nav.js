@@ -36,7 +36,7 @@ const Nav = () => {
 					</NavLink>
 				</li>
 				<li>
-					<NavLink to="/grammarcheckquizzes">
+					<NavLink to="/grammarquizzes">
 						Grammar <br />
 						Quiz{" "}
 					</NavLink>
@@ -51,7 +51,7 @@ const Nav = () => {
 					<NavLink to="/blog">Blog</NavLink>
 				</li>
 				<li>
-					<button>Contact Us</button>
+					<button className="btn-primary">Contact Us</button>
 				</li>
 			</ul>
 		</nav>

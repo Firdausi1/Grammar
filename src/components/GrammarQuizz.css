@@ -1,0 +1,95 @@
+.grammarQuizz {
+	height: 75vh;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.grammarQuizz > h2 {
+	text-align: center;
+	margin-top: 30px;
+}
+
+.grammarQuizz > h2 span {
+	color: #0702fc;
+}
+
+.grammarQuizz__list {
+	display: flex;
+	flex: row wrap;
+	justify-content: space-between;
+}
+
+.grammarQuizz__container {
+	margin-top: 20px;
+}
+
+.list:nth-of-type(even) {
+	background-color: #105a31;
+}
+
+.list {
+    width: 30%;
+    font-weight: 500;
+	background-color: #0702fc;
+	color: white;
+	margin-bottom: 10px;
+	padding: 10px;
+	border-radius: 25px;
+	text-align: center;
+}
+
+.grammarQuizz__option {
+	display: flex;
+	flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.grammarQuizz__option p{
+    color: #105a31;
+    font-weight: 600;
+}
+
+.grammarQuizz__option button{
+    margin-top: 20px;
+    width: 25%;
+    font-weight: 600;
+}
+
+.btn-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.more-icon{
+    margin-left: 20px;
+}
+
+@media screen and (max-width: 768px){
+    .grammarQuizz{
+        font-size: 12px;
+    }
+    .grammarQuizz__option button{
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 425px){
+    .grammarQuizz{
+        font-size: 12px;
+    }
+    .grammarQuizz__list{
+        display: flex;
+        flex-direction: column;
+    }
+    .list{
+        width: 80%;
+    }
+
+    .grammarQuizz__option button{
+        width: 80%;
+    }
+}
+
+

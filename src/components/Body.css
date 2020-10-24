@@ -49,18 +49,6 @@
     width: 50%;
 }
 
-.body__btn1 {
-	background-color: #0702fc;
-}
-
-.body__btn2 {
-	background-color: #8d07ae;
-}
-
-.body__btn3 {
-	background-color: #105a31;
-}
-
 @media screen and (max-width: 768px){
     .btn{
         padding: 15px;

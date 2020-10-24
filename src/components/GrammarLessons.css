@@ -1,0 +1,68 @@
+.grammarLesson{
+    height: 75vh;
+    width: 90%;
+    margin: 0 auto;
+}
+
+ul{
+    list-style: none;
+}
+
+.grammarLesson > h2{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.grammarLesson > h2 span{
+    color: #0702FC;
+}
+.grammarLesson__container{
+    display: flex;
+    flex: row wrap;
+    justify-content: space-around;
+}
+
+.grammarLesson__box{
+    width: 30%;
+    margin-top: 20px;
+    color: #8D07AE;
+}
+
+.grammarLesson__box:nth-of-type(even) .list-title{
+    background-color: #105A31;
+}
+
+.grammarLesson__box li{
+    padding-left: 30px;
+    margin-bottom: 10px;
+}
+
+.list-title{
+    font-weight: 500;
+    background-color: #0702FC;
+    color: white;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+@media screen and (max-width: 768px){
+    .grammarLesson{
+        font-size: 12px;
+    }.grammarLesson__box{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 425px){
+    .grammarLesson{
+        font-size: 12px;
+    }
+    .grammarLesson__container{
+        display: flex;
+        flex-direction: column;
+    }
+    .grammarLesson__box{
+        width: 80%;
+    }
+}
