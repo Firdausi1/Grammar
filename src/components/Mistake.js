@@ -12,14 +12,14 @@ const Mistake = ({ message, mistake, replace, index, text, setText }) => {
 
 	useEffect(() => {
 		const replacetext = () => {
-			const textReplace= text.replace(mistake, change);
-			setText(textReplace);
+			text= text.replace(mistake, change);
+			setText(text);
 		};
 		
 		if(change){
 		replacetext();
 	}
-	}, [change, mistake, setText, text]);
+	}, [change]);
 	return (
 		<div className="mistake__container">
 			{message} <span> </span> Replace with{" "}
