@@ -12,24 +12,6 @@ const Header = () => {
 		setText(e.target.value);
 	};
 
-	const checker = async () => {
-		const LanguageToolApi = require("language-grammar-api");
-
-		const options = {
-			endpoint: "https://languagetool.org/api/v2",
-		};
-
-		const languageToolClient = new LanguageToolApi(options);
-
-		// const languages = await languageToolClient.languages();
-		const check = await languageToolClient.check({
-			text: text, // required
-			language: "en-US", // required (you can use .languages call to get language)
-		});
-		console.log(check);
-		setErrors(check.matches);
-	};
-
 	const handlePaste = () => {
 		navigator.clipboard
 			.readText()
@@ -42,6 +24,23 @@ const Header = () => {
 	};
 
 	useEffect(() => {
+		const checker = async () => {
+			const LanguageToolApi = require("language-grammar-api");
+	
+			const options = {
+				endpoint: "https://languagetool.org/api/v2",
+			};
+	
+			const languageToolClient = new LanguageToolApi(options);
+	
+			// const languages = await languageToolClient.languages();
+			const check = await languageToolClient.check({
+				text: text, // required
+				language: "en-US", // required (you can use .languages call to get language)
+			});
+			console.log(check);
+			setErrors(check.matches);
+		};
 		checker();
 	}, [text]);
 
@@ -52,7 +51,7 @@ const Header = () => {
 					Do you need A<br />
 					<span> Grammar </span>Check?
 				</h2>
-				<p>
+				<p> 
 					<span>Make your work </span> error-free, smart and grammartically
 					correct <span> in an instant! </span>
 				</p>
@@ -64,9 +63,9 @@ const Header = () => {
 				<div className="header__bodySide">
 					<button className="btn-primary">Upload File</button>
 					<h3>OR</h3>
-					<a className="header__link" onClick={handlePaste}>
+					<button className="header__link" onClick={handlePaste}>
 						Paste Plain Test below
-					</a>
+					</button>
 					<div className="mistake">
 						{errors.map((error, index) => (
 							<Mistake
@@ -95,7 +94,7 @@ const Header = () => {
 							<p>Oops there seems to be some errors. </p>
 						</div>
 					)}
-					<button className="btn__submit btn-primary" onSubmit={checker}>
+					<button className="btn__submit btn-primary">
 						Submit
 					</button>
 				</div>
