@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import ErrorPage from "./components/ErrorPage";
 import GrammarLessons from "./components/GrammarLessons";
 import GrammarQuizz from "./components/GrammarQuizz";
+import ContactUs from "./components/ContactUs";
 
 function App() {
 	return (
@@ -27,6 +28,9 @@ function App() {
 
 					<Route path="/grammarquizzes" exact>
 						<GrammarQuizz />
+					</Route>
+					<Route path="/contactus" exact>
+						<ContactUs/>
 					</Route>
 
 					<Route path="/:id" exact>

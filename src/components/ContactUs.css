@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+html,
+body{
+height: 100%;
+font-family: 'Poppins', sans-serif;
+font-style: normal;
+font-weight: bold;
+line-height: 28px;
+}
+#contact h2{
+    color: #0702fc;
+}
+
+.top-nav-collapse {
+    background-color: white;
+  }
+.navbar{
+   background-color: white;
+}
+
+label, input{
+    color: #105A31
+}
+  @media (max-width: 980px) {
+       #ladybug{
+  display:none;
+}
+  }

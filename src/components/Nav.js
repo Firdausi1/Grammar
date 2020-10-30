@@ -51,7 +51,9 @@ const Nav = () => {
 					<NavLink to="/blog">Blog</NavLink>
 				</li>
 				<li>
-					<button className="btn-primary">Contact Us</button>
+					<Link to="/contactus" className="btn-primary">
+					Contact Us
+					</Link>
 				</li>
 			</ul>
 		</nav>
